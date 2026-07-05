@@ -61,8 +61,14 @@ def dpo_loss(
           Used for logging only — does NOT feed the optimiser.
         - ``rejected_rewards``: shape ``(batch,)`` — same on the rejected side.
     """
-    # <YOUR CODE HERE>
-    raise NotImplementedError("Task 2: implement dpo_loss")
+    pi_logratios  = policy_chosen_logps  - policy_rejected_logps
+    ref_logratios = reference_chosen_logps - reference_rejected_logps
+    logits = pi_logratios - ref_logratios
+    losses = -F.logsigmoid(beta * logits)
+
+    chosen_rewards   = (beta * (policy_chosen_logps   - reference_chosen_logps)).detach()
+    rejected_rewards = (beta * (policy_rejected_logps - reference_rejected_logps)).detach()
+    return losses, chosen_rewards, rejected_rewards
 
 # --------------------------------------------------------------------------- #
 # Self-check — run with: python -m tasks.task2_dpo_loss                       #

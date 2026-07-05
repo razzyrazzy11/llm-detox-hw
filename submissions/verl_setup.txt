@@ -1,0 +1,50 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.0.2
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+Sun Jul  5 15:43:34 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.159.04             Driver Version: 580.159.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:8D:00.0 Off |                    0 |
+| N/A   41C    P0             72W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+---
+-rw-rw-r-- 1 razvans razvans 906068 Jul  5 15:43 data/train.parquet
+-rw-rw-r-- 1 razvans razvans  98912 Jul  5 15:43 data/val.parquet
+
+checkpoints/rm/:
+total 1941040
+drwxrwxr-x 2 razvans razvans       4096 Jul  5 15:31 .
+drwxrwxr-x 5 razvans razvans       4096 Jul  5 12:51 ..
+-rw-rw-r-- 1 razvans razvans       2427 Jul  5 15:31 chat_template.jinja
+-rw-rw-r-- 1 razvans razvans       1399 Jul  5 15:31 config.json
+-rw------- 1 razvans razvans 1976167144 Jul  5 15:31 model.safetensors
+-rw-rw-r-- 1 razvans razvans        258 Jul  5 15:31 rm_config.json
+-rw-rw-r-- 1 razvans razvans   11421990 Jul  5 15:31 tokenizer.json
+-rw-rw-r-- 1 razvans razvans        697 Jul  5 15:31 tokenizer_config.json
+-rw-rw-r-- 1 razvans razvans         52 Jul  5 15:31 val_metrics.json
