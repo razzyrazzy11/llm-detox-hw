@@ -1,0 +1,9 @@
+total 976124
+drwxr-xr-x 2 root    root         4096 Jul  6 09:43 .
+drwxrwxr-x 8 razvans razvans      4096 Jul  6 09:03 ..
+-rw-r--r-- 1 root    root         2427 Jul  6 09:43 chat_template.jinja
+-rw-r--r-- 1 root    root         1305 Jul  6 09:42 config.json
+-rw-r--r-- 1 root    root          138 Jul  6 09:42 generation_config.json
+-rw-r--r-- 1 root    root    988097824 Jul  6 09:42 model.safetensors
+-rw-r--r-- 1 root    root     11421892 Jul  6 09:43 tokenizer.json
+-rw-r--r-- 1 root    root          667 Jul  6 09:43 tokenizer_config.json
